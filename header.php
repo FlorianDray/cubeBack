@@ -13,12 +13,10 @@
     <div class="contenu-page">
         <div class="menu-lateral">
             <nav>
-                <ul>
-                <li><a href="./index.php">Accueil</a></li>
-                <li><a href="./products.php">Produits</a></li>
-                <li><a href="#">Catégories</a></li>
-                <li><a href="#">Marques</a></li>
-                </ul>
+                <a href="./index.php">Accueil</a>
+                <a href="./products.php">Produits</a>
+                <a href="#">Catégories</a>
+                <a href="#">Marques</a>
             </nav>
         </div>
     </div>

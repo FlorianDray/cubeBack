@@ -26,7 +26,8 @@ body {
     height: 100vh;
     margin: 0;
     text-align: center;
-    flex-direction: column
+    flex-direction: column;
+    margin-left: -220px;
 }
 
 form {
@@ -126,21 +127,23 @@ form button:hover {
     left: 0;
 }
 
-.menu-lateral nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+.menu-lateral nav {
+    padding: 0px;
 }
 
-.menu-lateral nav ul li {
-    padding: 10px;
-}
-
-.menu-lateral nav ul li a {
+.menu-lateral a {
+    display: block;
     text-decoration: none;
     color: #000;
+    padding: 20px 0 20px 15px;
+    border-bottom: 3px #ffffff solid;
 }
 
-.menu-lateral nav ul li a:hover {
-    color: #ff0000;
+.menu-lateral a:hover {
+    background-color: rgba(35, 95, 255);
+    color: white
+}
+
+.menu-lateral a:focus {
+    background-color: rgba(35, 95, 255);
 }

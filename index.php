@@ -12,4 +12,4 @@ if(!isset($_SESSION['user_id'])){
 <link href="style.css" rel="stylesheet" type="text/css"/>
 
 <?php require './header.php';?>
- <h1>Bonjour <?php $_SESSION['user_name']?></h1>
+ <h1>Bonjour Michel.<?php $_SESSION['user_name']?></h1>
