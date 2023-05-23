@@ -22,7 +22,6 @@ if(isset($_SESSION['user_id'])){
 <a href="./register.php">Pas encore de compte ?</a>
 </div>
 
-
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     try{
@@ -34,10 +33,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if (password_verify($_POST['password'], $user["password"])) {
             $_SESSION["user_id"] = $user["id"];
 		    $_SESSION["user_name"] = $user["last_name"];
+            echo "<div class='sucess'>Connexion réussi</div>";
             header("Location: index.php");
 		    exit;
         } else{
-        echo "<script>alert(\"Mail ou mot de passe incorrect\")</script>";
+        echo "<div class='error'>Mail ou mot de passe incorrect</div>";
         } 
     } catch (PDOException $e) {
         echo "La requête d'insertion a échoué : " . $e->getMessage();
