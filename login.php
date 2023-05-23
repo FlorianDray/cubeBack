@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
         if (password_verify($_POST['password'], $user["password"])) {
             $_SESSION["user_id"] = $user["id"];
-		    $_SESSION["name"] = $user["last_name"] . $user["first_name"];
+		    $_SESSION["user_name"] = $user["last_name"];
             header("Location: index.php");
 		    exit;
         } else{
@@ -36,6 +36,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     } catch (PDOException $e) {
         echo "La requête d'insertion a échoué : " . $e->getMessage();
     }
-    
 }
 ?>
