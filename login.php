@@ -9,13 +9,19 @@ if(isset($_SESSION['user_id'])){
 }
 ?>
 
-<form action="" method="post">  
-    <h1>Connexion</h1>        
+<link href="style.css" rel="stylesheet" type="text/css"/>
+
+<div class="form-ci">
+<img class="logo-sm" src="./assets/images/logo-sneak-me-blanc.png" alt="">
+<form action="" method="post">   
+    <h1>Connexion</h1>       
     <input type="email" name="mail" placeholder="Adresse mail" required autofocus>        
     <input type="password" name="password" placeholder="Mot de passe" required>
     <button type="submit">Se connecter</button>
 </form>
-<a href="./register.php">S'inscrire</a>
+<a href="./register.php">Pas encore de compte ?</a>
+</div>
+
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {

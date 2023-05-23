@@ -9,20 +9,21 @@ if(isset($_SESSION['user_id'])){
 }
 ?>
 
-<form action="" method="post">  
-    <label for="last_name">Nom :</label>
-    <input type="text " id="last_name" name="last_name" required><br><br>
-    <label for="first_name">Prénom :</label>
-    <input type="text" id="first_name" name="first_name" required><br><br>
-    <label for="adress">Adresse :</label>
-    <input type="text" id="adress" name="adress" required><br><br>
-    <label for="mail">Mail :</label>
-    <input type="mail" id="mail" name="mail" required><br><br>
-    <label for="password">Mot de passe :</label>
-    <input type="password" id="password" name="password" required><br><br>
-    <input type="submit" value="S'inscrire">
+<link href="style.css" rel="stylesheet" type="text/css"/>
+
+<div class="form-ci">
+<img class="logo-sm" src="./assets/images/logo-sneak-me-blanc.png" alt="">
+<form action="" method="post">
+<h1> Inscription </h1>  
+    <input type="text " id="last_name" name="last_name" placeholder="Nom" required autofocus>
+    <input type="text" id="first_name" name="first_name" placeholder="Prénom"  required>
+    <input type="text" id="adress" name="adress" placeholder="Adresse"  required>
+    <input type="mail" id="mail" name="mail" placeholder="Adresse Mail"  required>
+    <input type="password" id="password" name="password" placeholder="Mot de passe"  required>
+    <button type="submit">S'inscrire</button>
   </form>
-<a href="./login.php">Se connecter</a>
+<a href="./login.php">Vous avez déjà un compte ?</a>
+</div>
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
