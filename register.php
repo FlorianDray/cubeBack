@@ -12,7 +12,7 @@ if(isset($_SESSION['user_id'])){
 <link href="style.css" rel="stylesheet" type="text/css"/>
 
 <div class="form-ci">
-<img class="logo-sm" src="./assets/images/logo-sneak-me-blanc.png" alt="">
+<img class="logo-sm" src="./assets/images/logo-sneak-me-bleu.png" alt="">
 <form action="" method="post">
 <h1> Inscription </h1>  
     <input type="text " id="last_name" name="last_name" placeholder="Nom" required autofocus>

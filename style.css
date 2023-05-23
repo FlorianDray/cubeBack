@@ -1,7 +1,18 @@
 body {
+    margin: 0;
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.error {
+    background-color: red;
+}
+
+.success {
+    background-color: green;
+}
+
+/* CONNEXION ET INSCRIPTION */
 
 .logo-sm {
     width: 380px;
@@ -36,12 +47,17 @@ form input {
     border-radius: 10px;
     font-size: 16px;
     border: 1px rgb(196, 196, 196) solid;
+    text-indent: 10px;
 }
 
 form input::placeholder {
     text-indent: 10px;
     color: rgb(140, 140, 140);
     font-weight: 100;
+}
+
+form input:focus {
+    text-indent: 10px;
 }
 
 form button {
@@ -66,4 +82,31 @@ form button:hover {
 
 .form-ci a:hover {
     color: rgb(30, 74, 195);
+}
+
+/* HEADER BACK */
+
+.barre-haut {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(35, 95, 255, 1) 0%, rgba(45, 161, 245, 1) 100%);
+    padding: 10px;
+}
+
+.barre-haut img {
+    width: 120px;
+}
+
+.btn-deconnexion {
+    display: inline-block;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.btn-deconnexion img {
+    width: 30px;
+    height: 30px;
 }
