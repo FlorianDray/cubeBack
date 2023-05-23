@@ -2,6 +2,7 @@ body {
     margin: 0;
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
+    margin-left: 220px;
 }
 
 .error {
@@ -92,6 +93,7 @@ form button:hover {
     align-items: center;
     background: linear-gradient(90deg, rgba(35, 95, 255, 1) 0%, rgba(45, 161, 245, 1) 100%);
     padding: 10px;
+    margin-left: -220px;
 }
 
 .barre-haut img {
@@ -109,4 +111,36 @@ form button:hover {
 .btn-deconnexion img {
     width: 30px;
     height: 30px;
+}
+
+.contenu-page {
+    display: flex;
+}
+
+.menu-lateral {
+    width: 200px;
+    height: 100vh;
+    background-color: #f2f2f2;
+    position: fixed;
+    top: 50px;
+    left: 0;
+}
+
+.menu-lateral nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-lateral nav ul li {
+    padding: 10px;
+}
+
+.menu-lateral nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.menu-lateral nav ul li a:hover {
+    color: #ff0000;
 }
