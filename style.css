@@ -43,30 +43,39 @@ form {
     align-items: center;
 }
 
+form textarea {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 form input,
 form button,
 form a,
-form select {
+form select,
+form textarea {
     margin-bottom: 10px;
 }
 
 form input,
-form select {
+form select,
+form textarea {
     width: 450px;
     height: 40px;
     border-radius: 10px;
     font-size: 16px;
     border: 1px rgb(196, 196, 196) solid;
     text-indent: 10px;
+    resize: vertical;
 }
 
-form input::placeholder {
+form input,
+form textarea::placeholder {
     text-indent: 10px;
     color: rgb(140, 140, 140);
     font-weight: 100;
 }
 
-form input:focus {
+form input,
+form textarea:focus {
     text-indent: 10px;
 }
 
