@@ -9,6 +9,7 @@ if (!isset($_SESSION['user_id'])) {
 }
 ?>
 <link href="style.css" rel="stylesheet" type="text/css" />
+<?php require './header.php';?>
 <?php
 try {
     if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["id"])) {
