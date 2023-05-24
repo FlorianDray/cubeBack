@@ -14,7 +14,7 @@
                 <a href="./index.php">Accueil</a>
                 <a href="./products.php">Produits</a>
                 <a href="./colors.php">Couleurs</a>
-                <a href="#">Marques</a>
+                <a href="./brands.php">Marques</a>
             </nav>
         </div>
     </div>
