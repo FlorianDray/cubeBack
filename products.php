@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             echo "<div class='sucess'>Produit ajouté avec succès</div>";
             header('Location: products.php');
         } else {
-            echo "<div class='error'>Mail ou mot de passe incorrect</div>";
+            echo "<div class='error'>Erreur lors de l'ajout du produit</div>";
         }
     } catch (PDOException $e) {
         echo "La requête d'insertion a échoué : " . $e->getMessage();

@@ -2,7 +2,6 @@
 
 <?php session_start(); ?>
 <header>
-
     <div class="barre-haut">
         <img src="./assets/images/logo-sneak-me-blanc.png" alt="Logo">
         <a href="./logout.php" class="btn-deconnexion">
@@ -14,7 +13,7 @@
             <nav>
                 <a href="./index.php">Accueil</a>
                 <a href="./products.php">Produits</a>
-                <a href="#">Couleurs</a>
+                <a href="./colors.php">Couleurs</a>
                 <a href="#">Marques</a>
             </nav>
         </div>
