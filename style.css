@@ -5,6 +5,10 @@ body {
     margin-left: 220px;
 }
 
+h1 {
+    color: black;
+}
+
 .error {
     background-color: red;
 }
@@ -136,14 +140,10 @@ form button:hover {
     text-decoration: none;
     color: #000;
     padding: 20px 0 20px 15px;
-    border-bottom: 3px #ffffff solid;
+    border-bottom: 1px black solid;
 }
 
 .menu-lateral a:hover {
     background-color: rgba(35, 95, 255);
     color: white
-}
-
-.menu-lateral a:focus {
-    background-color: rgba(35, 95, 255);
 }
