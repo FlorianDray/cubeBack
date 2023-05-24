@@ -11,6 +11,14 @@ h1 {
     color: black;
 }
 
+a {
+    color: rgba(35, 95, 255, 1);
+}
+
+a:hover {
+    color: rgb(30, 74, 195);
+}
+
 .error {
     background-color: red;
 }
@@ -118,17 +126,27 @@ form button:hover {
 
 .barre-haut img {
     width: 120px;
+    margin: 0 0 0 15px;
 }
 
-.btn-deconnexion {
+.btn-deconnexion,
+.btn-profil {
     display: inline-block;
     background: none;
     border: none;
     padding: 0;
+}
+
+.btn-deconnexion {
+    margin: 0 25px 0 0;
+}
+
+.btn-profil {
     margin: 0;
 }
 
-.btn-deconnexion img {
+.btn-deconnexion img,
+.btn-profil img {
     width: 30px;
     height: 30px;
 }
@@ -137,12 +155,24 @@ form button:hover {
     display: flex;
 }
 
+.vertical-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    height: 90%;
+}
+
+.ptiteborder {
+    border-top: 1px rgb(170, 170, 170) solid;
+}
+
 .menu-lateral {
     width: 200px;
     height: 100vh;
     background-color: #f2f2f2;
     position: fixed;
-    top: 50px;
+    top: 54px;
     left: 0;
 }
 
@@ -155,7 +185,7 @@ form button:hover {
     text-decoration: none;
     color: #000;
     padding: 20px 0 20px 15px;
-    border-bottom: 1px black solid;
+    border-bottom: 1px rgb(170, 170, 170) solid;
 }
 
 .menu-lateral a:hover {
@@ -175,7 +205,7 @@ form button:hover {
 .product-table td {
     padding: 10px;
     text-align: left;
-    border: 1px solid #ddd;
+    border: 1px solid #d5d5d5;
 }
 
 .product-table th {
@@ -184,13 +214,15 @@ form button:hover {
 }
 
 .product-table tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #efefef;
 }
 
 .product-table a {
     margin-right: 10px;
 }
 
-a.delete-link {
+/* MODIFIER */
+
+.delete-link {
     color: red;
 }

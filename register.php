@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         header("Location: login.php");
 		exit;
     } catch (PDOException $e) {
-        echo "La requête d'insertion a échoué : " . $e->getMessage();
+        echo "La requête d'ajout d'utilisateur a échoué : " . $e->getMessage();
     }
 }
 ?>

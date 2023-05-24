@@ -19,6 +19,7 @@ if(!isset($_SESSION['user_id'])){
     <thead>
     <tr>
         <th>Nom</th>
+        <th>Actions</th>
     </tr>
     </thead>
     <tbody>

@@ -15,7 +15,7 @@ $colors = getAllColors($conn);
 
 <body>
     <form action="" method="post">
-        <h1>Ajout un produit</h1>
+        <h1>Ajout d'un produit</h1>
         <input name="name" type="text" placeholder="Nom du produit">
         <textarea name="description" placeholder="Description du produit"></textarea>
         <select name="brand">
@@ -28,7 +28,7 @@ $colors = getAllColors($conn);
                 <option value="<?php echo $row['id'] ?>"> <?php echo $row['name'] ?></option>
             <?php } ?>
         </select>
-        <input name="size" type="number" min="18" max="7    0" placeholder="Taille" required>
+        <input name="size" type="number" min="18" max="70" placeholder="Taille (18 - 70)" required>
         <input name="price" type="number" min="0" step="0.1" placeholder="Prix" required>
         <button type="submit">Ajouter un produit</button>
     </form>
@@ -36,12 +36,11 @@ $colors = getAllColors($conn);
         <thead>
             <tr>
                 <th>Nom</th>
-                <th>Descrition</th>
+                <th>Description</th>
                 <th>Marque</th>
                 <th>Couleur</th>
                 <th>Taille</th>
                 <th>Prix</th>
-                <th>Images</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -59,7 +58,6 @@ $colors = getAllColors($conn);
                 echo '<td>' . $row['color'] . '</td>';
                 echo '<td>' . $row['size'] . '</td>';
                 echo '<td>' . $row['price'] . '</td>';
-                echo '<td>' . $row['img_path'] . '</td>';
                 echo '<td><a href="./formProduct.php?id=' . $row['id'] . '">Modifier</a> <a href="./action/product/deleteProduct.php?id=' . $row['id'] . '" onclick="return confirm(\'Êtes-vous sûr de vouloir supprimer ce produit ?\')" class="delete-link">Supprimer</a></td>';
                 echo '</tr>';
             }

@@ -29,7 +29,7 @@ try {
 }
 ?>
 <form action="" method="post">
-    <h1>Modifier une marque</h1>
+    <h1>Modifier la marque</h1>
     <input name="name" type="text" value="<?php echo $brand['name']; ?>" placeholder="Nouveau nom"  required>
     <button type="submit">Valider</button>
 </form>
