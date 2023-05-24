@@ -30,7 +30,7 @@ try {
 ?>
 <form action="" method="post">
     <h1>Modifier une couleur</h1>
-    <input name="name" type="text" value="<?php echo $color['name']; ?>"  required>
+    <input name="name" type="text" value="<?php echo $color['name']; ?>" placeholder="Nouvelle nom"  required>
     <button type="submit">Valider</button>
 </form>
 <?php

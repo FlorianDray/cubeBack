@@ -15,7 +15,7 @@ if(!isset($_SESSION['user_id'])){
     <input name="name" type="text" placeholder="Nom de la marque" required>
     <button type="submit">Valider</button>
 </form>
-<table>
+<table class="product-table">
     <thead>
     <tr>
         <th>Nom</th>
@@ -30,7 +30,7 @@ $colors = $stmt->fetchAll(PDO::FETCH_ASSOC);
 foreach($colors as $row){
     echo '<tr>';
     echo '<td>' . $row['name'] .'</td>';
-    echo '<td><a href="./formBrand.php?id=' . $row['id'] . '">Modifier</a><a href="./action/brands/deleteBrand.php?id=' . $row['id'] . '" onlick=return confirm(\"Êtes-vous sûr de vouloir supprimer cette marque ?\")>Supprimer</a></td>';
+    echo '<td><a href="./formBrand.php?id=' . $row['id'] . '">Modifier</a><a href="./action/brands/deleteBrand.php?id=' . $row['id'] . '" onlick=return confirm(\"Êtes-vous sûr de vouloir supprimer cette marque ?\") class="delete-link">Supprimer</a></td>';
     echo '</tr>';
 }
 ?>

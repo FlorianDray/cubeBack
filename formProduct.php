@@ -30,8 +30,8 @@ try {
 ?>
 <form action="" method="post">
     <h1>Modifier un produit</h1>
-    <input name="size" type="number" min="18" max="50" value="<?php echo $product['size']; ?>" required>
-    <input name="price" type="number" min="0" step="0.1" value="<?php echo $product['price']; ?>" required>
+    <input name="size" type="number" min="18" max="50" value="<?php echo $product['size']; ?>" placeholder="Nouvelle taille" required>
+    <input name="price" type="number" min="0" step="0.1" value="<?php echo $product['price']; ?>" placeholder="Nouveau prix" required>
     <button type="submit">Valider</button>
 </form>
 <?php

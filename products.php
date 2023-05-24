@@ -18,7 +18,7 @@ if(!isset($_SESSION['user_id'])){
     <input name="price" type="number" min="0"  step="0.1" placeholder="Prix" required>
     <button type="submit">Ajouter un produit</button>
 </form>
-<table>
+<table class="product-table">
     <thead>
     <tr>
         <th>Marque</th>
@@ -45,7 +45,7 @@ foreach($products as $row){
     echo '<td>' . $row['size'] .'</td>';
     echo '<td>' . $row['price'] .'</td>';
     echo '<td>' . $row['img_path'] .'</td>';
-    echo '<td><a href="./formProduct.php?id=' . $row['id'] . '">Modifier</a> <a href="./action/product/deleteProduct.php?id=' . $row['id'] . '" onclick="return confirm(\'Êtes-vous sûr de vouloir supprimer ce produit ?\')">Supprimer</a></td>';
+    echo '<td><a href="./formProduct.php?id=' . $row['id'] . '">Modifier</a> <a href="./action/product/deleteProduct.php?id=' . $row['id'] . '" onclick="return confirm(\'Êtes-vous sûr de vouloir supprimer ce produit ?\')" class="delete-link">Supprimer</a></td>';
     echo '</tr>';
 }
 ?>
