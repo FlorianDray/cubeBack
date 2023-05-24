@@ -9,16 +9,14 @@
             <img src="./assets/images/deco-bouton.png" alt="Déconnexion">
         </a>
     </div>
-
     <div class="contenu-page">
         <div class="menu-lateral">
             <nav>
                 <a href="./index.php">Accueil</a>
                 <a href="./products.php">Produits</a>
-                <a href="#">Catégories</a>
+                <a href="#">Couleurs</a>
                 <a href="#">Marques</a>
             </nav>
         </div>
     </div>
-
 </header>
