@@ -12,28 +12,40 @@ if(!isset($_SESSION['user_id'])){
 <body>
 <form action="" method="post">   
     <h1>Ajout un produit</h1>
-    <input name="size" type="number" min="18" max="50" required>
-    <input name="price" type="number" min="0"  step="0.1" required>
+    <input name="brand" type="text" placeholder="Marque" required>
+    <input name="color" type="text"  placeholder="Couleur" required>
+    <input name="size" type="number" min="18" max="50" placeholder="Taille" required>
+    <input name="price" type="number" min="0"  step="0.1" placeholder="Prix" required>
     <button type="submit">Ajouter un produit</button>
 </form>
 <table>
     <thead>
     <tr>
-        <th>taille</th>
-        <th>prix</th>
+        <th>Marque</th>
+        <th>Couleur</th>
+        <th>Taille</th>
+        <th>Prix</th>
+        <th>Images</th>
     </tr>
     </thead>
     <tbody>
 <?php 
-$query = "SELECT * FROM sneakers;";
+$query = "SELECT s.id, s.size, s.price, b.name AS brand, c.name AS color
+            from sneakers s
+            JOIN brands b ON s.id_brand = b.id
+            JOIN colors c ON s.id_color = c.id";
 $stmt = $conn->prepare($query);
 $stmt->execute();
 $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// var_dump($products);
 foreach($products as $row){
     echo '<tr>';
+    echo '<td>' . $row['brand'] .'</td>';
+    echo '<td>' . $row['color'] .'</td>';
     echo '<td>' . $row['size'] .'</td>';
     echo '<td>' . $row['price'] .'</td>';
-    echo '<td><a href="./formProduct.php?id=' . $row['id'] . '">Modifier</a><a href="./action/product/deleteProduct.php?id=' . $row['id'] . '" onlick=return confirm(\"Êtes-vous sûr de vouloir supprimer ce produit ?\")>Supprimer</a></td>';
+    echo '<td>' . $row['img_path'] .'</td>';
+    echo '<td><a href="./formProduct.php?id=' . $row['id'] . '">Modifier</a> <a href="./action/product/deleteProduct.php?id=' . $row['id'] . '" onclick="return confirm(\'Êtes-vous sûr de vouloir supprimer ce produit ?\')">Supprimer</a></td>';
     echo '</tr>';
 }
 ?>
@@ -49,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $stmt->bindValue(':price', $_POST['price']);
         $stmt->bindValue(':img_path', 'chemin');
         $stmt->bindValue(':id_color', 1);
-        $stmt->bindValue(':id_brand', 1);
+        $stmt->bindValue(':id_brand', $_POST['brand']);
         if($stmt->execute()){
             echo "<div class='sucess'>Produit ajouté avec succès</div>";
             header('Location: products.php');
