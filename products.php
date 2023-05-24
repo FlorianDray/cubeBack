@@ -33,7 +33,7 @@ foreach($products as $row){
     echo '<tr>';
     echo '<td>' . $row['size'] .'</td>';
     echo '<td>' . $row['price'] .'</td>';
-    echo '<td><a href="./updateProduct.php?id=' . $row['id'] . '">Modifier</a><a href="./deleteProduct.php?id=' . $row['id'] . '" onlick=return confirm(\"Êtes-vous sûr de vouloir supprimer ce produit ?\")>Supprimer</a></td>';
+    echo '<td><a href="./formProduct.php?id=' . $row['id'] . '">Modifier</a><a href="./action/product/deleteProduct.php?id=' . $row['id'] . '" onlick=return confirm(\"Êtes-vous sûr de vouloir supprimer ce produit ?\")>Supprimer</a></td>';
     echo '</tr>';
 }
 ?>
